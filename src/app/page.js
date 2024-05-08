@@ -1,7 +1,7 @@
 "use client"
 
-import { AccountCircle, AddAPhoto, CheckBox, CloudUpload, DeleteForever, Favorite, LockClockOutlined, } from "@mui/icons-material";
-import {  Button, ButtonGroup, Divider, Fab, IconButton, Input, InputAdornment, Rating, Skeleton, TextField, Typography, alertClasses } from "@mui/material";
+import { AccountCircle, AddAPhoto, BarChart, CheckBox, CloudUpload, DeleteForever, Favorite, LockClockOutlined, } from "@mui/icons-material";
+import { Box, Button, ButtonGroup, Container, Divider, Fab, Grid, IconButton, Input, InputAdornment, Link, Rating, Skeleton, Stack, TextField, Typography, alertClasses } from "@mui/material";
 import React, { useState } from "react";
 import HoverRating from "./componets/rating";
 import Custome_Icon from "./componets/custome_icon";
@@ -21,6 +21,7 @@ import Drawer_com from "./componets/drawer";
 import Speed_Dial from "./componets/sppeddial";
 import BasicSpeedDial from "./componets/sppeddial";
 import HorizontalNonLinearStepper from "./componets/stepper";
+import BasicBars from "./componets/barchart";
 
 
 const labels = {
@@ -273,20 +274,83 @@ export default function Home() {
       <div>
         <div className="text-center text-white p-5" >
           <h1 className="text-4xl" >
-           Speed Dial</h1>
+            Speed Dial</h1>
         </div>
         <div className="p-5 ">
-          <BasicSpeedDial/>
+          <BasicSpeedDial />
         </div>
       </div>
       <div>
         <div className="text-center text-white p-5" >
           <h1 className="text-4xl" >
-           Stepper</h1>
+            Stepper</h1>
         </div>
         <div className="p-5 ">
-          <HorizontalNonLinearStepper/>
+          <HorizontalNonLinearStepper />
         </div>
+      </div>
+      <div>
+        <div className="text-center text-white p-5" >
+          <h1 className="text-4xl" >
+            Stepper</h1>
+        </div>
+        <div className="p-5 ">
+          <Link href='/tabs'   >Tabs Section</Link>
+        </div>
+      </div>
+      <div>
+        <div className="text-center text-white p-5" >
+          <h1 className="text-4xl" >
+            Layout</h1>
+        </div>
+        <Box component="section" sx={{ p: 2, border: '1px solid grey', color: 'white' }} >
+          This Box renders as an HTML section element.
+        </Box>
+        <Box component="button" sx={{ color: 'white' }} >
+          Keyur
+        </Box>
+        <Box component="b" sx={{ color: 'white', paddingLeft: '5px' }} >
+          Pansuriya
+        </Box>
+        <br></br>
+        <Container maxWidth="md" fixed  >
+          <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
+        </Container>
+        <br></br> <br></br>
+        <br></br> <br></br>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={5} sx={{ color: 'white' }} >
+            <Grid item xs={12} sm={12} md={6} lg={3} sx={{ border: '2px solid white' }} >
+              Keyu
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={3} sx={{ border: '2px solid white' }}>
+              Keyu
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={3} sx={{ border: '2px solid white' }}>
+              Keyu
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={3} sx={{ border: '2px solid white' }}>
+              Keyu
+            </Grid>
+          </Grid>
+        </Box>
+        <br></br>
+        <br></br>
+        <br></br>
+        <Box sx={{ width: '100%' }}>
+          <Stack direction={{ xs: "column", md: "row" }} spacing={2}>
+            <h1 className="bg-white w-full text-center" >Keyur</h1>
+            <h1 className="bg-white w-full text-center" >Keyur</h1>
+            <h1 className="bg-white w-full text-center"> Keyur</h1>
+          </Stack>
+        </Box>
+      </div>
+      <div>
+        <div className="text-center text-white p-5" >
+          <h1 className="text-4xl" >
+            Charts</h1>
+        </div>
+        <BasicBars/>
       </div>
     </main>
   );
